@@ -5,7 +5,7 @@ const port = 4000;
 
 //todo
 function add(...num) {
-  return num.reduce((acc, n) => acc + n, 0)
+  return num.reduce((acc, n) => acc + n, 0);
 }
 
 app.listen(port, () => {
