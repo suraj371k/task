@@ -19,8 +19,8 @@ jobs:
             echo "::warning file=server.js,line=5::Found TODO comment"
           fi
           
-          if ! grep -q ";" app.js; then
-            echo "::error file=app.js,line=1::Missing semicolons!"
+          if ! grep -q ";" server.js; then
+            echo "::error file=server.js,line=1::Missing semicolons!"
             exit 1
           fi
       
