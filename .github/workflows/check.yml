@@ -15,8 +15,8 @@ jobs:
       # 3. Check for errors
       - name: Validate code
         run: |
-          if grep -q "TODO" app.js; then
-            echo "::warning file=app.js,line=5::Found TODO comment"
+          if grep -q "TODO" server.js; then
+            echo "::warning file=server.js,line=5::Found TODO comment"
           fi
           
           if ! grep -q ";" app.js; then
