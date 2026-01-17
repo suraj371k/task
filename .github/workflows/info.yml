@@ -9,3 +9,5 @@ jobs:
               run: |
                  echo "Repo: $GITHUB_REPOSITORY"
                  echo "Branch: $GITHUB_REF_NAME"
+                 echo "Action: $GITHUB_ACTOR"
+                 echo "Url: $GITHUB_API_URL"
