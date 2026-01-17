@@ -1,0 +1,11 @@
+name: information about repository
+on: [push]
+
+jobs:
+    info:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print info
+              run: |
+                 echo "Repo: $GITHUB_REPOSITORY"
+                 echo "Branch: $GITHUB_REF_NAME"
