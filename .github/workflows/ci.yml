@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
     prod-check:
-        if: ${{github.ref == 'refs/head/main'}}
+        if: ${{github.ref == 'refs/heads/main'}}
         runs-on: ubuntu-latest
         steps:
             - run: echo "deploying to production"
