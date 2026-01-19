@@ -2,9 +2,17 @@ name: deploying to production
 on: [push]
 
 jobs:
-    prod-check:
-        if: ${{github.ref == 'refs/heads/main'}}
-        runs-on: ubuntu-latest
-        steps:
-            - run: echo "deploying to production"
-            - run: echo ${{github.ref}}
+  dump-context:
+    runs-on: ubuntu-latest
+    steps:
+    # Print entire github context as JSON
+    - name: Dump GitHub context
+      run: echo '${{ toJson(github) }}'
+    
+    # Print job context
+    - name: Dump job context
+      run: echo '${{ toJson(job) }}'
+    
+    # Print matrix context
+    - name: Dump matrix
+      run: echo '${{ toJson(matrix) }}'
